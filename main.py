@@ -15,7 +15,6 @@ def is_prime(n):
 # Example usage
 if __name__ == "__main__":
     num = int(input("Enter a number: "))
-    if is_prime(num):
-        print(f"{num} is a prime number.")
-    else:
-        print(f"{num} is not a prime number.")
+    even_odd = "even" if num % 2 == 0 else "odd"
+    prime_text = "prime" if is_prime(num) else "not prime"
+    print(f"{num} is {even_odd} and {prime_text}.")
