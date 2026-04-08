@@ -12,6 +12,15 @@ def is_prime(n):
         i += 6
     return True
 
+
+def is_even(n):
+    return n % 2 == 0
+
+
+def is_odd(n):
+    return n % 2 != 0
+
+
 # Example usage
 if __name__ == "__main__":
     raw = input("Enter a number: ")
@@ -20,6 +29,6 @@ if __name__ == "__main__":
     except ValueError:
         print(f"{raw} is not an integer.")
     else:
-        even_odd = "even" if num % 2 == 0 else "odd"
+        even_odd = "even" if is_even(num) else "odd"
         prime_text = "prime" if is_prime(num) else "not prime"
         print(f"{num} is {even_odd} and {prime_text}.")
