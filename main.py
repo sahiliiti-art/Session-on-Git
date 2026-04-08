@@ -14,7 +14,12 @@ def is_prime(n):
 
 # Example usage
 if __name__ == "__main__":
-    num = int(input("Enter a number: "))
-    even_odd = "even" if num % 2 == 0 else "odd"
-    prime_text = "prime" if is_prime(num) else "not prime"
-    print(f"{num} is {even_odd} and {prime_text}.")
+    raw = input("Enter a number: ")
+    try:
+        num = int(raw)
+    except ValueError:
+        print(f"{raw} is not an integer.")
+    else:
+        even_odd = "even" if num % 2 == 0 else "odd"
+        prime_text = "prime" if is_prime(num) else "not prime"
+        print(f"{num} is {even_odd} and {prime_text}.")
